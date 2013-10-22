@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+	<title>Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="alternate" type="application/rss+xml" title="Test RSS Feed" href="http://localhost:6666/workspace/test/?feed=rss2">
+	<link rel="SHORTCUT ICON" href="http://localhost:6666/workspace/test/wp-content/themes/renegade/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="http://localhost:6666/workspace/test/wp-content/themes/renegade/favicon.ico"> 
+
+	<link rel="stylesheet" href="index_files/style.css" type="text/css" media="all">
+	
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="http://localhost:6666/workspace/test/wp-content/themes/renegade/ie.css" type="text/css" media="all" />
+	<![endif]-->
+		<script type="text/javascript" src="index_files/jquery1_10.js"></script>
+
+	<script type="text/javascript" src="index_files/ddslick.js"></script>
+      <script type="text/javascript" src="index_files/switchable.js"></script>
+      <script type="text/javascript" src="index_files/typeahead.js"></script>
+	<style type="text/css">
+		body, input, select, textarea { font-family:"sofiapro",Arial,sans-serif; font-size:14px; }
+		.content .c1 { width: 100%; margin: 0px; }
+		.content .c2 { display: none; }
+	</style>
+	<style type="text/css">
+		#mydiv:hover {background:white;}
+		 
+		 .menuitem {
+		   float:left;
+		   padding-right:5px;
+		   padding-top:28px;
+		   z-index:999;
+		   }
+		   
+		   
+			/* Required Styles */
+			#slide {
+			  position: relative;
+			  width: 550px;
+			  height: 310px;
+			  overflow: hidden;
+			}
+			#slide img {
+			  position: absolute;
+			} 
+			
+			 .switchable-triggers {
+			width:100%;
+			height:30px;
+			overflow-y:hidden;
+			line-height:30px;
+			text-align:center;
+			display:none;
+		  }
+		  .switchable-triggers li {
+			display:inline-block;
+			*display: inline;
+			*zoom: 1;
+			margin:0 3px;
+			color:#c6c6c6;
+			font-size:28px;
+			font-weight:bold;
+			text-shadow:0 2px 1px rgba(0, 0, 0, .4);
+			cursor:pointer;
+			display:none;
+		  }
+		  .switchable-triggers li.current {
+			color:#8ab516;
+			display:none;
+		  }
+		  
+		  
+		  /**
+		   * Horizontal
+		   */
+		  #scrollable-1 {
+			position:relative;
+			
+			height:245px;
+			overflow:hidden;
+		  }
+		  #scrollable-1 li {
+			float:left;
+			margin-right:15px;
+		  }
+		  
+			/**
+		   * Horizontal
+		   */
+		  #scrollable-2 {
+			position:relative;
+			
+			height:245px;
+			overflow:hidden;
+		  }
+		  #scrollable-2 li {
+			float:left;
+			margin-right:15px;
+		  }
+		  
+			  /**
+		   * Horizontal
+		   */
+		  #scrollable-3 {
+			position:relative;
+			
+			height:245px;
+			overflow:hidden;
+		  }
+		  #scrollable-3 li {
+			float:left;
+			margin-right:15px;
+		  }
+		  
+		  .imgtext { 
+			text-align:center;
+			
+		  }
+		  
+		  .topictext {
+			font-size:18px;
+			color:#999999;
+		  }
+		</style>
+		
+		<meta name="generator" content="WordPress 3.6.1">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<script src="index_files/tipuedrop/tipuedrop_content.js"></script>
+	<link href="index_files/tipuedrop/tipuedrop.css" rel="stylesheet">
+	<script src="index_files/tipuedrop/tipuedrop.js"></script>
+</head>
+<body class="home blog" onload="init()">
+<script type="text/javascript" >
+function init() {
+
+$('#tipue_drop_input').tipuedrop();
+
+$('#searchbox').typeahead({
+  name: 'corses',
+  local: ['leadership', 'airplane', 'airplane maintenance'],
+  header: '<h3 class="league-name">Search a Course</h3>'
+});
+
+var studyinusa = [
+    {
+        text: "Study in America",
+        value: 1,
+        selected: true
+    },
+    {
+        text: "Apply without GRE/TOFEL",
+        value: 2,
+        selected: false
+        //description: "Description with Twitter",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+    },
+    {
+        text: "Apply for Ivy League",
+        value: 3,
+        selected: false
+        //description: "Description with LinkedIn",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+    },
+    {
+        text: "Online Education",
+        value: 4,
+        selected: false
+        //description: "Description with Foursquare",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+    }
+];
+
+var proftraining = [
+    {
+        text: "Professional Training",
+        value: 1,
+        selected: true
+    },
+    {
+        text: "Airplane Maintenance",
+        value: 2,
+        selected: false
+        //description: "Description with Twitter",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+    },
+    {
+        text: "Education Professionals",
+        value: 3,
+        selected: false
+        //description: "Description with LinkedIn",
+       // imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+    },
+    {
+        text: "Hospitality Programs",
+        value: 4,
+        selected: false
+        //description: "Description with Foursquare",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+    },
+    {
+        text: "Leadership Education",
+        value: 5,
+        selected: false
+        //description: "Description with Foursquare",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+    },
+    {
+        text: "Senior Care",
+        value: 6,
+        selected: false
+        //description: "Description with Foursquare",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+    },
+     {
+        text: "Smart City",
+        value: 7,
+        selected: false
+        //description: "Description with Foursquare",
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+    }
+];
+var beapartner = [
+    {
+        text: "Become a Partner",
+        value: 1,
+        selected: true
+    },
+    {
+        text: "Become a Parner",
+        value: 2,
+        selected: false,
+        //description: "Description with Twitter"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+    },
+    {
+        text: "Current Partners",
+        value: 3,
+        selected: false,
+        //description: "Description with LinkedIn"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+    }
+];
+var aboutus = [
+    {
+        text: "About Us",
+        value: 1,
+        selected: true
+    }
+];
+
+var signin = [
+    {
+        text: "Sign In",
+        value: 1,
+        selected: true
+    }
+];
+
+var signout = [
+    {
+        text: "Sign Out",
+        value: 1,
+        selected: true
+    }
+];
+div2click=$('#mydiv2').ddslick({
+    data:studyinusa,
+    width:150,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv3').ddslick({
+     data:proftraining,
+    width:180,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv4').ddslick({
+     data:beapartner,
+    width:150,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv5').ddslick({
+     data:aboutus,
+    width:100,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv6').ddslick({
+     data:signin,
+    width:70,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv7').ddslick({
+     data:signout,
+    width:70,
+	selectText: "Professional Training",
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+
+
+ /**
+   * Horizontal
+   */
+Slider= $('#scrollable-1').switchable({
+   triggers: '&bull;',
+    putTriggers: 'insertBefore',
+ effect: 'fade',
+	     prev: '#prev',
+     next: $('#next'),
+    panels: 'li',
+    easing: 'ease-in-out',
+    effect: 'scrollLeft',
+    steps: 1,
+    visible: 3, // important
+    end2end: true,
+    autoplay: false,
+	 api: true // if set to true, Switchable returns API
+  });
+  
+   $('#scrollable-2').switchable({
+   triggers: '&bull;',
+    putTriggers: 'insertBefore',
+ effect: 'fade',
+	     prev: '#prev2',
+     next: $('#next2'),
+    panels: 'li',
+    easing: 'ease-in-out',
+    effect: 'scrollLeft',
+    steps: 1,
+    visible: 3, // important
+    end2end: true,
+    autoplay: false,
+	 api: true // if set to true, Switchable returns API
+  });
+  
+     $('#scrollable-3').switchable({
+   triggers: '&bull;',
+    putTriggers: 'insertBefore',
+ effect: 'fade',
+	     prev: '#prev3',
+     next: $('#next3'),
+    panels: 'li',
+    easing: 'ease-in-out',
+    effect: 'scrollLeft',
+    steps: 1,
+    visible: 3, // important
+    end2end: true,
+    autoplay: false,
+	 api: true // if set to true, Switchable returns API
+  });
+  
+  $(".dd-selected ").css('color',"#000000");
+  $(".dd-selected ").css('padding',"4px");
+  
+   $(".dd-selected ").css('cursor',"pointer");
+   $("#mydiv2").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+$("#mydiv3").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+$("#mydiv4").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+$("#mydiv5").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+$("#mydiv6").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+$("#mydiv7").mouseenter(function(){
+   $(this).css('background-color','#F16424');
+}).mouseleave(function(){
+   $(this).css('background-color','transparent');
+});
+
+
+//remove the image dot
+$("ul").css("list-style","none").css("padding-left","0px");
+
+}
+
+//remove the slider's default triggers
+/*
+setTimeout(function() {
+$(".switchable-triggers").remove()} ,300);
+setTimeout(function() {
+$(".switchable-triggers").remove()} ,600);
+setTimeout(function() {
+$(".switchable-triggers").remove()} ,1200);*/
+
+
+setTimeout(function(){
+	$("#mydiv3").css("z-index",999);
+	$("#mydiv2").css("z-index",999);
+},500);
+
+//initialize the top search inputbox 
+ 
+
+</script>
+<!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
+<div class="logowrap">
+	<!--<div class="logo">
+		<img src="images/logo.png" />
+	</div>-->
+	<div class="searchbar">
+		  <div>
+			<input type="text" id="tipue_drop_input" autocomplete="off" />
+			  <a  class="searchlink languageselected"> English</a> | 
+			  <a   class="searchlink"> Chinese </a> 
+		  </div>
+		  <div id="tipue_drop_content"></div>
+     </div>
+
+</div>
+<div class="bgBar">
+	<div class="bgBarInner"> 
+    </div>
+</div>
+<div class="searchboxwraper">
+	<div class="searchboxcontentwraper">
+		<div class="searchboxcontent">
+			<div style="font-size: 19px; padding:10px 0px"> Search for a course</div>
+			<div style="font-size: 16px; width:500px; padding: 5px 0px;">please use following to search box to search your interested courses or programs:</div>
+			<input id="searchbox" type="text" class="typehead" placeholder="Input a course name"/>	
+	  </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+	<div class="topbar">
+
+		<div class="nav">
+		   <div class="topmenu">
+		           <div class="logo">
+						<img src="images/logo.png" />
+					</div>
+		            <div class="menuitem">
+						<div id="mydiv2" ></div>
+			        </div>
+					<div class="menuitem">
+						<div id="mydiv3"></div>
+					</div>
+					<div class="menuitem">
+						<div id="mydiv4"></div>
+					</div>
+					<div class="menuitem">
+						<div id="mydiv5"></div>
+					</div>
+					<div class="menuitem"> 
+					<div style="margin-top:5px; margin-right:10px;">|| </div>
+					</div>
+					<div class="menuitem">
+						<div id="mydiv6"></div>
+					</div>
+					<div class="menuitem">
+						<div id="mydiv7"></div>
+					</div>
+					
+		   </div>
+			
+		</div><!-- /menu -->
+
+	</div><!-- /topbar -->
+
+	<div class="content">
+
+		<div class="c1">
+	<!-- post -->
+	<div class="post-1 post type-post status-publish format-standard hentry category-uncategorized" id="post-1" style="height:850px">
+		<table width="100%"> 
+				<tr><td colspan="3"><a href="professionalTraining.html" class="topictext">Study in America</a></td>
+				</tr>
+				<tr>
+				<td> <div class="slidebutton">
+						<a id="prev">
+									<img img src="index_files/images/arrow-left-g.png"  onmouseover="this.src='index_files/images/arrow-left.png'" onmouseout="this.src='index_files/images/arrow-left-g.png'" />
+				  </a>
+					  </div></td>
+				<td width="95%">
+					<div id="scrollable-1">
+						<ul>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c1.jpg"  style="width:300px; height:200px; z-index:-1;" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c2.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c3.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c4.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c5.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c6.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						</ul>
+					</div>
+			   </td>
+				<td><div class="button">
+						<div class="slidebutton">
+						<a id="next" >
+									<img img src="index_files/images/arrow-right-g.png"  onmouseover="this.src='index_files/images/arrow-right.png'" onmouseout="this.src='index_files/images/arrow-right-g.png'" />
+						  </a>
+					  </div>
+				  </td>
+			<!--/post -->
+			</tr>
+		</table>
+		<table width="100%"> 
+				<tr><td colspan="3"><a href="professionalTraining.html" class="topictext">Professional Trainings</a></td>
+				</tr>
+				<tr>
+				<td> <div class="slidebutton">
+						<a id="prev2">
+									<img img src="index_files/images/arrow-left-g.png"  onmouseover="this.src='index_files/images/arrow-left.png'" onmouseout="this.src='index_files/images/arrow-left-g.png'" />
+				  </a>
+					  </div></td>
+				<td width="95%">
+					<div id="scrollable-2">
+						<ul>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c1.jpg"  style="width:300px; height:200px; z-index:-1;" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c2.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c3.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c4.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c5.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c6.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						</ul>
+					</div>
+			   </td>
+				<td><div class="button">
+						<div class="slidebutton">
+						<a id="next2" >
+									<img img src="index_files/images/arrow-right-g.png"  onmouseover="this.src='index_files/images/arrow-right.png'" onmouseout="this.src='index_files/images/arrow-right-g.png'" />
+						  </a>
+					  </div>
+				  </td>
+			<!--/post -->
+			</tr>
+		</table>
+		
+		<table width="100%"> 
+				<tr><td colspan="3"><a href="professionalTraining.html" class="topictext">Recent Activities</a></td>
+				</tr>
+				<tr>
+				<td> <div class="slidebutton">
+						<a id="prev3">
+									<img img src="index_files/images/arrow-left-g.png"  onmouseover="this.src='index_files/images/arrow-left.png'" onmouseout="this.src='index_files/images/arrow-left-g.png'" />
+				  </a>
+					  </div></td>
+				<td width="95%">
+					<div id="scrollable-3">
+						<ul>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c1.jpg"  style="width:300px; height:200px; z-index:-1;" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c2.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c3.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c4.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c5.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						  <li>
+								<a href="http://www.natural-environment.com/places/milford_sound.php" target="_blank">
+									<img img src="images/c6.jpg"  style="width:300px; height:200px" />
+									<div class="imgtext">text</div>
+								</a>
+						  </li>
+						</ul>
+					</div>
+			   </td>
+				<td><div class="button">
+						<div class="slidebutton">
+						<a id="next3" >
+									<img img src="index_files/images/arrow-right-g.png"  onmouseover="this.src='index_files/images/arrow-right.png'" onmouseout="this.src='index_files/images/arrow-right-g.png'" />
+						  </a>
+					  </div>
+				  </td>
+			<!--/post -->
+			</tr>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+	
+<div class="bgBar2Foot">
+	
+	<div class="bgBarInnerFoot">
+			<table class="foottable"> 
+				<tr>
+					<th>
+						<a class="footlink"><img img src="images/logofoot.jpg" ></a>					</th> 
+					<th>
+						<a class="footlink">My Account</a>					</th> 
+					<th>
+						<a class="footlink">About</a>					</th> 
+					<th>
+						<a class="footlink">Help</a>					</th> 
+				</tr>
+				<tr>
+					<td rowspan="4" width="20">
+						<a class="footlink"><a class="footlink">Umetis dedicates to bridge the cross-pacific education communication, ......</a>					</td> 
+					<td>
+						<a class="footlink">Dashboard</a>					</td> 
+					<td>
+						<a class="footlink">About Us</a>					</td> 
+					<td>
+						<a class="footlink">Customer Service</a>					</td> 
+				</tr><tr>
+					<td>
+						<a class="footlink">My Account</a>					</td> 
+					<td>
+						<a class="footlink">About</a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+				</tr>
+				<tr>
+					<td>
+						<a class="footlink">Help</a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+				</tr>
+				<tr>
+					<td>
+						<a class="footlink">My Account</a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+					<td>
+						<a class="footlink"></a>					</td> 
+				</tr>
+			</table>
+		</div>
+</div>
+
+</body></html>

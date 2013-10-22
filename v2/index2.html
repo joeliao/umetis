@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="index_files/jquery1_10.js"></script>
+
+<script type="text/javascript" src="index_files/ddslick.js"></script>
+
+<script type="text/javascript" src="index_files/switchable.js"></script>
+
+<style type="text/css">
+#mydiv:hover {background:white;}
+ 
+ .menuitem {
+   float:left;
+   padding-right:5px; }
+   
+  /* Required Styles */
+	#slide {
+	  position: relative;
+	  width: 550px;
+	  height: 310px;
+	  overflow: hidden;
+	}
+	#slide img {
+	  position: absolute;
+	} 
+</style>
+</head>
+
+<body onload="init()">
+<script type="text/javascript" >
+function init() {
+
+$('#mydiv2').ddslick({
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+$('#mydiv3').ddslick({
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+
+  $(".dd-select").mouseenter(function(){
+   $(this).css('backgroundColor','white');
+
+}).mouseleave(function(){
+   $(this).css('backgroundColor','#EEEEEE');
+});
+
+$(function() {
+  $('#slide').switchable({
+    triggers: '&bull;',
+    putTriggers: 'insertBefore',
+    effect: 'fade',
+    /* fade effect only supports steps == 1 */
+    // steps: 1,
+    easing: 'ease-in-out',
+    loop: false,
+    prev: '#prev',
+    next: $('#next'),
+    onSwitch: function(event, currentIndex) {
+      var api = this;
+      api.prevBtn.toggleClass('disabled', currentIndex === 0);
+      api.nextBtn.toggleClass('disabled', currentIndex === api.length - 1);
+    }
+  });
+});
+}
+
+</script>
+<div class="abovehead">Above Head</div>
+<div class="head">
+<div class="menu">
+<strong>
+<div id="mydiv">test</div>
+	<div class="menuitem">
+			<select id="mydiv2">
+				<option value="0" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png"
+					data-description="Description with Facebook">Facebook</option>
+				<option value="1" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+					data-description="Description with Twitter">Twitter</option>
+				<option value="2" selected="selected" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+					data-description="Description with LinkedIn">LinkedIn</option>
+				<option value="3" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+					data-description="Description with Foursquare">Foursquare</option>
+			</select>
+	</div>
+</strong>
+	<div class="menuitem">
+		<select id="mydiv3">
+				<option value="0" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png"
+					data-description="Description with Facebook">Facebook</option>
+				<option value="1" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+					data-description="Description with Twitter">Twitter</option>
+				<option value="2" selected="selected" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+					data-description="Description with LinkedIn">LinkedIn</option>
+				<option value="3" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+					data-description="Description with Foursquare">Foursquare</option>
+	  </select>
+	</div>
+</strong>
+</div>
+</div>
+<div class="content">
+	<div id="slide">
+		<img src="images/p1.jpg" />
+		<img src="images/p2.jpg" />
+		<img src="images/p3.jpg" />
+		<img src="images/p4.jpg" />
+		<img src="images/p5.jpg" />
+		<img src="images/p6.jpg" />
+	</div>
+</div>
+<div class="footer"> Footer</div>
+</body>
+</html>
