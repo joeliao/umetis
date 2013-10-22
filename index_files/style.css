@@ -20,8 +20,10 @@ This theme is released under GPL (http://www.opensource.org/licenses/gpl-3.0.htm
 
 
 body { 
-	margin:0px; padding:0px; background:#e1ddd0 url('images/bg.jpg') center 240px no-repeat; position:relative;
-	font:normal normal 12px/150% Verdana, Helvetica, Arial, serif; color:#333333;
+	margin:0px; padding:0px;  position:relative;
+	font-size: 12px/150%; 
+	font-family:"sofiapro",Arial,sans-serif;
+	color:#333333;
 	}
 
 
@@ -32,8 +34,8 @@ body {
 a:hover { color:#E81E1E; }
 
 /* blue background bar */
-.bgBar { background:#464e54 url('images/bgBar.jpg') left top repeat-x; width:100%; height:300px; position:absolute; top:60px; left:0; z-index:-1; }
-.bgBarInner { background: url("../images/hg.jpg") center top repeat-x ;  background-size:100%; height:300px; margin-top:40px; }
+.bgBar { width:100%; height:300px; position:absolute; top:50px; left:0; z-index:-1; }
+.bgBarInner { background: url("../images/hg.jpg") center top repeat-x ;  background-size:100%; height:320px; margin-top:40px; }
 .bgBarInnerFoot { color:#999999; height:200px; margin-top:40px; width:800px; margin-left:auto; margin-right:auto;}
 .bgBar2Foot { background:#464e54 url('images/bgBar.jpg') left top repeat-x; width:100%; position:relative;top:-40px; left:0; z-index:-1; clear:both; float: left;}
 .foottable {width:100%;text-align:center;font-size:17px;}
@@ -41,7 +43,7 @@ a:hover { color:#E81E1E; }
 .wrap { width:1000px; margin:0px auto 0px; clear:both; }
 .logowrap { width:1000px; margin:0px auto 0px; display: block;}
 .signinwrap{ } 
-.logo {clear: both; width:150px; float: left}
+.logo {clear: both; width:150px; float: left; margin-right:30px;}
 .searchlink { position:relative;
     font-size: 14px;
     cursor:pointer;
@@ -74,6 +76,7 @@ a:hover { color:#E81E1E; }
   	margin:0 auto;
   }
 	.topbar { clear:both; margin:0px; height:40px; }
+	.topmenu {margin-top:10px;}
 /*
 		.menu { text-transform:uppercase; letter-spacing:1px; font-size:11px; line-height:100%; }
 			.menu ul { list-style:none; margin:0px; padding:0px; z-index:100; }
@@ -98,15 +101,17 @@ a:hover { color:#E81E1E; }
 			list-style: none;
 			margin: 0px; padding: 0px;
 			font-size: 10px; line-height: 100%;
-			text-transform: uppercase;
+			/*text-transform: uppercase;*/
 			
 		}
 		.nav li, .nav li a {
 			float: left;
 		}
 		.nav li {
-			margin: 0px; padding: 0px;
+			margin: 0px; 
+			/*padding-right: 40px;*/
 			position: relative;
+			width:100%;
 		}
 		.nav li a {
 			display: block;

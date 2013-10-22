@@ -17,7 +17,7 @@
       <script type="text/javascript" src="index_files/switchable.js"></script>
       <script type="text/javascript" src="index_files/typeahead.js"></script>
 	<style type="text/css">
-		body, input, select, textarea { font-family:Georgia, serif; font-size:14px; }
+		body, input, select, textarea { font-family:"sofiapro",Arial,sans-serif; font-size:14px; }
 		.content .c1 { width: 100%; margin: 0px; }
 		.content .c2 { display: none; }
 	</style>
@@ -27,6 +27,7 @@
  .menuitem {
    float:left;
    padding-right:5px;
+   padding-top:28px;
    z-index:999;
    }
    
@@ -143,23 +144,23 @@ var studyinusa = [
     {
         text: "Apply without GRE/TOFEL",
         value: 2,
-        selected: false,
+        selected: false
         //description: "Description with Twitter",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
     },
     {
         text: "Apply for Ivy League",
         value: 3,
-        selected: false,
+        selected: false
         //description: "Description with LinkedIn",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
     },
     {
         text: "Online Education",
         value: 4,
-        selected: false,
+        selected: false
         //description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     }
 ];
 
@@ -172,44 +173,44 @@ var proftraining = [
     {
         text: "Airplane Maintenance",
         value: 2,
-        selected: false,
+        selected: false
         //description: "Description with Twitter",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
     },
     {
         text: "Education Professionals",
         value: 3,
-        selected: false,
+        selected: false
         //description: "Description with LinkedIn",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+       // imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
     },
     {
         text: "Hospitality Programs",
         value: 4,
-        selected: false,
+        selected: false
         //description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     },
     {
         text: "Leadership Education",
         value: 5,
-        selected: false,
+        selected: false
         //description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     },
     {
         text: "Senior Care",
         value: 6,
-        selected: false,
+        selected: false
         //description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     },
      {
         text: "Smart City",
         value: 7,
-        selected: false,
+        selected: false
         //description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     }
 ];
 var beapartner = [
@@ -222,15 +223,15 @@ var beapartner = [
         text: "Become a Parner",
         value: 2,
         selected: false,
-        //description: "Description with Twitter",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+        //description: "Description with Twitter"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
     },
     {
         text: "Current Partners",
         value: 3,
         selected: false,
-        //description: "Description with LinkedIn",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+        //description: "Description with LinkedIn"
+        //imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
     }
 ];
 var aboutus = [
@@ -242,7 +243,7 @@ var aboutus = [
 ];
 div2click=$('#mydiv2').ddslick({
     data:studyinusa,
-    width:220,
+    width:150,
 	selectText: "Professional Training",
     onSelected: function(selectedData){
         //callback function: do something with selectedData;
@@ -250,7 +251,7 @@ div2click=$('#mydiv2').ddslick({
 });
 $('#mydiv3').ddslick({
      data:proftraining,
-    width:220,
+    width:180,
 	selectText: "Professional Training",
     onSelected: function(selectedData){
         //callback function: do something with selectedData;
@@ -258,7 +259,7 @@ $('#mydiv3').ddslick({
 });
 $('#mydiv4').ddslick({
      data:beapartner,
-    width:220,
+    width:150,
 	selectText: "Professional Training",
     onSelected: function(selectedData){
         //callback function: do something with selectedData;
@@ -266,7 +267,7 @@ $('#mydiv4').ddslick({
 });
 $('#mydiv5').ddslick({
      data:aboutus,
-    width:220,
+    width:150,
 	selectText: "Professional Training",
     onSelected: function(selectedData){
         //callback function: do something with selectedData;
@@ -325,7 +326,9 @@ Slider= $('#scrollable-1').switchable({
 	 api: true // if set to true, Switchable returns API
   });
   
-  $(".dd-selected ").css('color',"#FFFFFF");
+  $(".dd-selected ").css('color',"#000000");
+  $(".dd-selected ").css('padding',"4px");
+  
    $(".dd-selected ").css('cursor',"pointer");
    $("#mydiv2").mouseenter(function(){
    $(this).css('background-color','#F16424');
@@ -372,9 +375,9 @@ setTimeout(function(){
 </script>
 <!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
 <div class="logowrap">
-	<div class="logo">
+	<!--<div class="logo">
 		<img src="images/logo.png" />
-	</div>
+	</div>-->
 	<div class="searchbar">
           <a  class="searchlink"> English</a> | 
           <a   class="searchlink"> Chinese </a> || 
@@ -386,7 +389,6 @@ setTimeout(function(){
 </div>
 <div class="bgBar">
 	<div class="bgBarInner"> 
-		
     </div>
 </div>
 <div class="searchboxwraper">
@@ -404,8 +406,10 @@ setTimeout(function(){
 	<div class="topbar">
 
 		<div class="nav">
-		   <div id="topmenu">
-		   
+		   <div class="topmenu">
+		           <div class="logo">
+						<img src="images/logo.png" />
+					</div>
 		           <div class="menuitem">
 						<div id="mydiv2" ></div>
 			 </div>
