@@ -41,19 +41,19 @@
     ddslickCSS = '<style id="css-ddslick" type="text/css">' +
                 '.dd-select{ border-radius:2px; border:none; position:relative; cursor:pointer; background:none; cursor: pointer; background-color:transparent !important; color:"#FFFFFF";}' +
                 '.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }' +
-                '.dd-selected{ overflow:hidden; display:block; padding:10px; font-weight:bold; font-color:"#FFFFFF" !important;}' +
+                '.dd-selected{ overflow:hidden; display:block; }' +
                 '.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px; visibility:hidden}' +
                 '.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }' +
                 '.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}' +
                 '.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}' +
-                '.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }' +
+                '.dd-option{ width:80%; padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }' +
                 '.dd-options > li:last-child > .dd-option{ border-bottom:none;}' +
                 '.dd-option:hover{ background:#F48B5E; color:#000;}' +
                 '.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }' +
                 '.dd-option-selected { background:#f6f6f6; }' +
                 '.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}' +
                 '.dd-image-right { float:right; margin-right:15px; margin-left:5px;}' +
-                '.dd-container{ position:relative;}? .dd-selected-text { font-weight:bold; cursor: pointer !important; color: "#FFFFFF" !important;}?</style>';
+                '.dd-container{ position:relative;}? .dd-selected-text { font-weight:bold;  }?</style>';
 
     //CSS styles are only added once.
     if ($('#css-ddslick').length <= 0) {
@@ -153,7 +153,10 @@
                 //Displaying options
                 obj.find('.dd-select').on('click.ddslick', function () {
                     open(obj);
-                });
+                }).mouseover(function(){console.log('over select');open(obj); obj.overoption=true;}).mouseout(function(){
+					console.log('out select');
+					setTimeout(function(){ if (!obj.overoption) close(obj);},5);
+				});
 
                 //Selecting an option
 				//changed by Xiongjiu 2013 09 03
@@ -161,7 +164,7 @@
                    // selectIndex(obj, $(this).closest('li').index());
 				   selectIndex(obj, 0);
 				   close(obj);
-                });
+                }).mouseover(function(){console.log('over option');obj.overoption=true;}).mouseout(function(){console.log('out option');obj.overoption=false; setTimeout(function(){ if (!obj.overoption) close(obj);},5);});
 
                 //Click anywhere to close
                 if (options.clickOffToClose) {
@@ -187,6 +190,10 @@
 
     //Public method to open drop down
     methods.open = function () {
+		$(".dd-options").css("color", '#F16424');
+		$(".dd-options").css("border-bottom", 'none');
+		$(".dd-select").css("color", '#F16424');
+		$(".dd-select").css("border-bottom", 'none');
         return this.each(function () {
             var $this = $(this),
                 pluginData = $this.data('ddslick');
@@ -199,6 +206,8 @@
 
     //Public method to close drop down
     methods.close = function () {
+		$(".dd-select").css("color", '#333333');
+		$(".dd-select").css("border-bottom", 'none');
         return this.each(function () {
             var $this = $(this),
                 pluginData = $this.data('ddslick');
@@ -252,7 +261,7 @@
         if (settings.showSelectedHTML) {
             ddSelected.html(
                     (selectedData.imageSrc ? '<img class="dd-selected-image' + (settings.imagePosition == "right" ? ' dd-image-right' : '') + '" src="' + selectedData.imageSrc + '" />' : '') +
-                    (selectedData.text ? '<label class="dd-selected-text">' + selectedData.text + '</label>' : '') +
+                    (selectedData.text ? selectedData.text  : '') +
                     (selectedData.description ? '<small class="dd-selected-description dd-desc' + (settings.truncateDescription ? ' dd-selected-description-truncated' : '') + '" >' + selectedData.description + '</small>' : '')
                 );
 
